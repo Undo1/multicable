@@ -1,3 +1,7 @@
+# multicable
+
+Calling `ActionCable.server.broadcast` multiple times is ugly. This is an insanely simple gem to do that for you.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -17,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-> ActionCable.server.broadcast ["broadcasting1", "broadcasting2"], { payload: "whatever" }
+> ActionCable.server.broadcast_multiple ["broadcasting1", "broadcasting2"], { payload: "whatever" }
 [ActionCable] Broadcasting to broadcasting1: {:payload=>"whatever"}
 [ActionCable] Broadcasting to broadcasting2: {:payload=>"whatever"}
 ```
